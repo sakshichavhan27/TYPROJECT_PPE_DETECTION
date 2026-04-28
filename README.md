@@ -12,6 +12,15 @@ This repository contains the Flask-based web application for detecting Personal 
 - **Data Storage**: Detection results are stored in a MySQL database.
 - **Flask Web Application**: Simple web interface for uploading and analyzing video files.
 
+## System Workflow
+
+1. User uploads a video through the web interface  
+2. The system processes the video frame by frame  
+3. YOLOv8 model detects PPE items  
+4. Detected objects are labeled with confidence scores  
+5. Results are displayed with bounding boxes  
+6. Detection data is stored in the MySQL database  
+
 ## Prerequisites
 
 Make sure you have the following installed:
@@ -74,6 +83,13 @@ To distribute your project as a standalone `.exe` file, follow these steps:
 - The system will analyze the video and display detection results.
 - Results, including detected PPE classes and confidence scores, will be stored in the MySQL database.
 
+## Output
+
+- Bounding boxes around detected PPE items  
+- Labels such as Helmet, Gloves, Vest, etc.  
+- Confidence score displayed for each detection  
+- Detection results stored in MySQL database  
+
 ## Project Structure
 
 ```
@@ -103,6 +119,17 @@ To distribute your project as a standalone `.exe` file, follow these steps:
 
 5. **Deployment**:
    - Host the application on a docker for remote accessibility.
+  
+## Challenges & Solutions
+
+- **Challenge:** Real-time video processing  
+  **Solution:** Optimized frame handling using OpenCV  
+
+- **Challenge:** Detection accuracy  
+  **Solution:** Used a trained dataset with multiple PPE classes  
+
+- **Challenge:** Data storage and management  
+  **Solution:** Integrated MySQL database for structured logging  
 
 ## License
 
