@@ -13,7 +13,7 @@ This repository contains the Flask-based web application for detecting Personal 
 - **Flask Web Application**: Simple web interface for uploading and analyzing video files.
 
 
-  ## System Workflow
+## System Workflow
 
 1. User uploads a video through the web interface  
 2. The system processes the video frame by frame  
@@ -84,7 +84,7 @@ To distribute your project as a standalone `.exe` file, follow these steps:
 - The system will analyze the video and display detection results.
 - Results, including detected PPE classes and confidence scores, will be stored in the MySQL database.
 
-  ## Output
+## Output
 
 - Bounding boxes around detected PPE items  
 - Labels such as Helmet, Gloves, Vest, etc.  
